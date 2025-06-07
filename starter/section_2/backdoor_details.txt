@@ -14,3 +14,7 @@ The backdoor process runs with root privileges to evade detection under the rogu
 56565 (TCP)
 Justification:
 The backdoor process "remotesec" listens on TCP port 56565, which is a non-standard port typically used for legitimate services. The use of such a port is a tactic to avoid raising suspicion.
+
+Actions Taken:
+- Rogue usernames 'voldemort' and 'darklord' have been deleted.
+- The backdoor process 'remotesec' has been terminated to remove persistence.
