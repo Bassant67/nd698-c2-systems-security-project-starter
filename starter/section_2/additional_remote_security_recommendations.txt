@@ -1,0 +1,25 @@
+To further strengthen the security of our remote login processes and password management, I recommend implementing the following best practices:
+
+Use Key-Based SSH Authentication Only
+Disable password authentication altogether and enforce SSH key pairs for all users. This greatly reduces the risk of brute-force attacks.
+
+Change Default SSH Port
+Move SSH service from the default port 22 to a non-standard port to reduce automated attack attempts.
+
+Enable Two-Factor Authentication (2FA)
+Implement 2FA for SSH logins to add an additional security layer beyond username and password or key.
+
+Use Fail2Ban or Similar Tools
+Deploy intrusion prevention tools like Fail2Ban to monitor login attempts and automatically block suspicious IP addresses after repeated failures.
+
+Limit User Access via AllowUsers or AllowGroups
+Restrict SSH login to only specific users or groups who require remote access.
+
+Regularly Update and Patch Systems
+Ensure the server and SSH software are up to date with the latest security patches.
+
+Enforce Strong Password Policies
+For any remaining password-based access, enforce complexity, expiration, and history policies to prevent weak or reused passwords.
+
+Monitor Logs and Use IDS/IPS
+Continuously monitor SSH logs and network activity, and use Intrusion Detection/Prevention Systems to detect and respond to suspicious behavior.
