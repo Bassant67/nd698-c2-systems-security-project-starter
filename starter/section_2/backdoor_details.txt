@@ -2,11 +2,15 @@
 
 # Rouge Username
 voldemort, darklord
+Justification:
+These usernames are not standard system accounts and were found in the /etc/passwd file and authentication logs (/var/log/auth.log) showing suspicious login attempts. They were created by the attackers to maintain persistent access.
 
 # Backdoor process name
-remotesec
+remotesec Running as: root (PID 973)
+Justification:
+The backdoor process runs with root privileges to evade detection under the rogue user's name. The process name "remotesec" is not a standard Linux service and was found listening on an unusual high-numbered port.
 
 # Backdoor port number the above process is listening on
-56565
-
-
+56565 (TCP)
+Justification:
+The backdoor process "remotesec" listens on TCP port 56565, which is a non-standard port typically used for legitimate services. The use of such a port is a tactic to avoid raising suspicion.
