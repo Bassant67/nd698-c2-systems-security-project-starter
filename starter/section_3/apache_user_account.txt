@@ -2,6 +2,21 @@
 
 
 #Configuration lines:
+# File: /etc/apache2/envvars
+
+export APACHE_RUN_USER=apache-user
+export APACHE_RUN_GROUP=apache-group
+
+# Additional steps taken:
+
+1. Created a new user group:
+   sudo addgroup apache-group
+
+2. Created a system user without a home directory and added it to the group:
+   sudo adduser --system --no-create-home --ingroup apache-group apache-user
+
+3. Restarted Apache to apply changes:
+   sudo service apache2 restart
 
 
 
